@@ -1,6 +1,6 @@
 package gildedRose;
 
-public abstract class Item {
+public class Item {
 
     public String name;
 
@@ -18,7 +18,6 @@ public abstract class Item {
    public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
-
     void updateItem() {
         if (!name.equals("Aged Brie")
                 && !name.equals("Backstage passes to a TAFKAL80ETC concert")) {
