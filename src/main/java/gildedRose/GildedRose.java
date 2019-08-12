@@ -6,19 +6,19 @@ public class GildedRose {
     }
 
     public  void updateQuality(Item[] items) {
-        for (int i = 0; i < items.length; i++) {
-            switch (items[i].name) {
+        for (Item item : items) {
+            switch (item.name) {
                 case "Aged Brie":
-                    new AgedBrieItemStrategy().updateItem(items[i]);
+                    new AgedBrieItemStrategy().updateItem(item);
                     break;
                 case "Backstage passes to a TAFKAL80ETC concert":
-                    new BackstageItemStrategy().updateItem(items[i]);
+                    new BackstageItemStrategy().updateItem(item);
                     break;
                 case "Sulfuras, Hand of Ragnaros":
-                    new SulfurasItemStrategy().updateItem(items[i]);
+                    new SulfurasItemStrategy().updateItem(item);
                     break;
                 default:
-                    new SimpleItemStrategy().updateItem(items[i]);
+                    new SimpleItemStrategy().updateItem(item);
                     break;
             }
         }
