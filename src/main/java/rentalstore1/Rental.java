@@ -1,4 +1,4 @@
-package rentalstore;
+package rentalstore1;
 
 public class Rental {
     private Movie movie;
@@ -15,5 +15,15 @@ public class Rental {
 
     public int getDayRented() {
         return dayRented;
+    }
+    public  double getCharge(){
+        return this.getMovie().getDayRented(dayRented);
+    }
+
+    int getFrequentRenterPoints(int frequentRenterPoints) {
+        if ((getMovie().getPriceCode() == Movie.NEW_RELEASE) && getDayRented() > 1) {
+            return 2;
+        }
+        return 1;
     }
 }
