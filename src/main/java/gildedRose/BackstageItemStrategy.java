@@ -6,10 +6,7 @@ public class BackstageItemStrategy implements ItemStrategy{
         if(item.quality < 50){
             item.quality++;
             if(item.sellIn < 11 && item.quality < 50){
-                item.quality++;
-            }
-            if(item.sellIn < 6 && item.quality < 50){
-                item.quality++;
+                item.quality = (item.sellIn<6&&item.quality<49)?item.quality+2:item.quality+1;
             }
         }
         item.sellIn--;
