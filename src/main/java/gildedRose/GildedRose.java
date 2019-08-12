@@ -1,7 +1,6 @@
 package gildedRose;
 public class GildedRose {
     Item[] items;
-    //ItemStrategy itemStrategy;
     public GildedRose(Item[] items) {
         this.items = items;
     }
