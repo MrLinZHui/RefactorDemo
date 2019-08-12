@@ -21,20 +21,6 @@ public abstract class Item {
     }
 
     void getItem() {
-//        switch (name) {
-//            case "Aged Brie":
-//                new AgedBrieItemStrategy().updateItem(this);
-//                break;
-//            case "Backstage passes to a TAFKAL80ETC concert":
-//                new BackstageItemStrategy().updateItem(this);
-//                break;
-//            case "Sulfuras, Hand of Ragnaros":
-//                new SulfurasItemStrategy().updateItem(this);
-//                break;
-//            default:
-//                new SimpleItemStrategy().updateItem(this);
-//                break;
-//        }
         itemStrategy.updateItem(this);
     }
 }
